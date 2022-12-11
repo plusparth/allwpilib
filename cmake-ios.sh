@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cmake -G "Unix Makefiles" \
+ -DCMAKE_CXX_STANDARD=17 \
+ -DCMAKE_CXX_STANDARD_REQUIRED=1 \
+ -DCMAKE_CXX_EXTENSIONS=0 \
+ -DCMAKE_CXX_FLAGS="-std=c++17" \
+ -DCMAKE_TOOLCHAIN_FILE=/Users/plusparth/Developer/ios-cmake/ios.toolchain.cmake \
+ -DPLATFORM=OS64 \
+ -DDEPLOYMENT_TARGET=14.0 \
+ -DCMAKE_MAKE_PROGRAM=/usr/bin/make \
+ -DWITH_JAVA=OFF \
+ -DWITH_CSCORE=OFF \
+ -DWITH_GUI=OFF \
+ -DWITH_WPILIB=OFF \
+ -DWITH_TESTS=OFF \
+ -DWITH_SHARED_LIBS=OFF \
+ -DWITH_SIMULATION_MODULES=OFF \
+ -S . -B build-cmake
